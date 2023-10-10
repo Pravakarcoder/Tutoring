@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import { HiBars3 } from "react-icons/hi2";
 import { GrClose } from "react-icons/gr";
 import { BiChevronRight } from "react-icons/bi";
+import LOGO from "../../../public/assets/WebAppLogo.png";
 
 const navigationMenu = [
   {
@@ -14,19 +15,19 @@ const navigationMenu = [
   },
   {
     href: "#",
-    label: "How we work",
+    label: "About Us",
   },
   {
     href: "#",
-    label: "Our mission",
+    label: "Programs",
   },
   {
     href: "#",
-    label: "About",
+    label: "Registration Form",
   },
   {
     href: "#",
-    label: "Contact",
+    label: "More",
   },
 ];
 
@@ -70,31 +71,37 @@ const Navigation = () => {
             {/* LOGO */}
             <div>
               <Link href="/">
-                <Image src={""} width={157} height={30} alt="logo" />{" "}
-                <span>LOGO</span>
+                <Image src={LOGO} width={50} height={30} alt="logo" />{" "}
+                <span className="text-4xl text-blue-800">
+                  THE SCHOLARS CORNER, LLC
+                </span>
+                <span className="text-blue-800 flex">TUTORING CENTER</span>
               </Link>
             </div>
             {/* Navigation Menu */}
-            <div className="hidden lg:block text-center">
+            <div className="hidden lg:block text-center text-xl">
               <ul className="flex space-x-7">
                 {navigationMenu.map((item, index) => (
-                  <li key={item.label}>
+                  <li key={item.label} className="hover:text-blue-800">
                     <Link href={item.href}>{item.label}</Link>
                   </li>
                 ))}
               </ul>
             </div>
-            {/* CTA */}
+            {/* LOGIN */}
 
             <div>
               <Link
                 href="#"
-                className="px-5 py-4 bg-primary text-white rounded-lg hidden lg:inline-block"
+                className="px-5 py-4 bg-blue-600 text-white rounded-xl hidden lg:inline-block hover:bg-blue-800"
               >
-                Get Started
+                Log In
               </Link>
 
-              <button className="block lg:hidden" onClick={mobileMenuHandler}>
+              <button
+                className="block -mt-20 sm:-mt-14 md:-mt-14  lg:hidden"
+                onClick={mobileMenuHandler}
+              >
                 <HiBars3 className="text-3xl" />
               </button>
             </div>
@@ -132,7 +139,7 @@ const Navigation = () => {
               {navigationMenu.map((item, index) => (
                 <Link
                   href={item.href}
-                  className="group flex items-center py-2 duration-300 transition-all ease-in-out  hover:text-primary"
+                  className="group flex items-center py-2 duration-300 transition-all ease-in-out  hover:text-blue-900"
                 >
                   <span>{item.label}</span>
                   <span className="left-2 relative duration-300 transition-all ease-in-out opacity-0 group-hover:opacity-100 group-hover:left-3">
@@ -140,6 +147,7 @@ const Navigation = () => {
                   </span>
                 </Link>
               ))}
+              <div></div>
             </ul>
           </div>
         </div>
