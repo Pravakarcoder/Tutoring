@@ -5,9 +5,10 @@ import { BiChevronRight } from "react-icons/bi";
 import { HiLocationMarker } from "react-icons/hi";
 import { HiPhone } from "react-icons/hi2";
 
+import LOGO from "../../../public/assets/WebAppLogo.png";
+
 const footerContent = {
   about: {
-    logo: "",
     description:
       "Quia at dolor commodi assumenda fugiat asperiores accusamus animi, odio quae doloremque qui laudantium non illo similique voluptatem autem!",
     cta: {
@@ -85,12 +86,7 @@ const Footer = () => {
         <div className="block lg:flex gap-20 mb-10 pb-10">
           <div className="w-full lg:w-4/12 mb-10 lg:mb-0">
             <Link href="/" className="mb-4 inline-block">
-              <Image
-                src={footerContent.about.logo}
-                width={157}
-                height={30}
-                alt="Logo"
-              />
+              <Image src={LOGO} width={50} height={30} alt="Logo" />
             </Link>
             <p className="leading-relaxed mb-7">
               {footerContent.about.description}
