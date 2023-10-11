@@ -128,7 +128,7 @@ const Testimonial = () => {
               </div>
               <div className="md:w-6/12">
                 <div>
-                  <div className="flex space-x-8">
+                  <div className="flex space-x-8  animate-bounce">
                     <div className="w-16 h-16 hidden md:block bg-blue-600 rounded-full mb-6"></div>
                     <div className="w-16 h-16 hidden md:block bg-blue-600 rounded-full mb-6"></div>
                   </div>
