@@ -1,6 +1,11 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const heroContent = {
   text: {
@@ -22,6 +27,14 @@ const heroContent = {
 };
 
 const Hero = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 700,
+      easeing: "slide",
+      once: true,
+    });
+  });
+
   return (
     <section className="py-20">
       <div className="container px-4 mx-auto">
